@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login|ranpass</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/download.png">
+</head>
+<body>
+    <div class="container">
+        <div class="box form-box">
+            <header>Login</header>
+            <form action="" method="post">
+                <div class="feild input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required>
+                </div>
+                <div class="feild input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="feild">
+                    <input type="submit" class="btn" name="submit" value="login" required onclick="auth()">
+                </div>
+                    <div class="links">
+                        <p>Don't have account?</p><a href="register.html">Sign up now</a>
+                    </div>
+               
+            </form>
+        </div>
+    </div>
+    <script>
+        function auth(){
+            var username = document.getElementById("username").value;
+            if(username== "admin@gmail.com"){
+                window.location.assign("main.html");
+                alert("Successfully login");
+            }
+            else{
+                alert("Invalid Information");
+                return;
+            }
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
